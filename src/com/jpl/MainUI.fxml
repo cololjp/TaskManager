@@ -5,7 +5,7 @@
 <GridPane alignment="CENTER" hgap="5" vgap="5" xmlns="http://javafx.com/javafx/8.0.121"
           xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jpl.Controller">
     <children>
-        <TableView focusTraversable="false" prefHeight="400.0" prefWidth="505.0" GridPane.columnIndex="1"
+        <TableView fx:id="taskTable" focusTraversable="false" prefHeight="400.0" prefWidth="505.0" GridPane.columnIndex="1"
                    GridPane.columnSpan="3" GridPane.rowIndex="1">
             <columns>
                 <TableColumn prefWidth="303.0" text="Description"/>
@@ -13,15 +13,15 @@
                 <TableColumn prefWidth="129.0" text="Status"/>
             </columns>
         </TableView>
-        <TextField alignment="TOP_LEFT" focusTraversable="false" minWidth="300.0" prefHeight="58.0" prefWidth="300.0"
+        <TextField fx:id="taskDescriptionField" alignment="TOP_LEFT" focusTraversable="false" minWidth="300.0" prefHeight="58.0" prefWidth="300.0"
                    promptText="Task Description" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2"/>
         <ComboBox fx:id="prioritiesBox" promptText="Priority" focusTraversable="false" GridPane.columnIndex="2"
                   GridPane.rowIndex="2"/>
-        <Button minWidth="50.0" text="Add" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="LEFT"
+        <Button fx:id="addButton" minWidth="50.0" text="Add" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="LEFT"
                 GridPane.rowIndex="2"/>
-        <Button text="Remove" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT"
+        <Button fx:id="removeButton" text="Remove" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT"
                 GridPane.rowIndex="2"/>
-        <CheckBox text="Completed" focusTraversable="false" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+        <CheckBox fx:id="completedCheckBox" text="Completed" focusTraversable="false" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
     </children>
     <columnConstraints>
         <ColumnConstraints/>
