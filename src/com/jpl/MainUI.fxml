@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<GridPane alignment="CENTER" hgap="5" vgap="5" xmlns="http://javafx.com/javafx/8.0.121"
-          xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jpl.Controller">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="CENTER" hgap="5" prefHeight="473.0" prefWidth="554.0" vgap="5" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jpl.Controller">
     <children>
-        <TableView fx:id="taskTable" focusTraversable="false" prefHeight="400.0" prefWidth="505.0" GridPane.columnIndex="1"
-                   GridPane.columnSpan="3" GridPane.rowIndex="1">
+        <TableView fx:id="taskTable" focusTraversable="false" prefHeight="400.0" prefWidth="505.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
             <columns>
-                <TableColumn prefWidth="303.0" text="Description"/>
-                <TableColumn minWidth="71.0" text="Priority"/>
-                <TableColumn prefWidth="129.0" text="Status"/>
+                <TableColumn fx:id="descriptionColumn" prefWidth="303.0" text="Description" />
+                <TableColumn fx:id="priorityColumn" minWidth="71.0" text="Priority" />
+                <TableColumn fx:id="statusColumn" prefWidth="129.0" text="Status" />
             </columns>
         </TableView>
-        <TextField fx:id="taskDescriptionField" alignment="TOP_LEFT" focusTraversable="false" minWidth="300.0" prefHeight="58.0" prefWidth="300.0"
-                   promptText="Task Description" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2"/>
-        <ComboBox fx:id="prioritiesBox" promptText="Priority" focusTraversable="false" GridPane.columnIndex="2"
-                  GridPane.rowIndex="2"/>
-        <Button fx:id="addButton" minWidth="50.0" text="Add" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="LEFT"
-                GridPane.rowIndex="2"/>
-        <Button fx:id="removeButton" text="Remove" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="RIGHT"
-                GridPane.rowIndex="2"/>
-        <CheckBox fx:id="completedCheckBox" text="Completed" focusTraversable="false" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+        <TextField fx:id="taskDescriptionField" alignment="TOP_LEFT" focusTraversable="false" minWidth="300.0" prefHeight="58.0" prefWidth="300.0" promptText="Task Description" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+        <ComboBox fx:id="prioritiesBox" focusTraversable="false" promptText="Priority" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button fx:id="addButton" focusTraversable="false" minWidth="50.0" text="Add" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+        <Button fx:id="removeButton" focusTraversable="false" text="Remove" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+        <CheckBox fx:id="completedCheckBox" focusTraversable="false" text="Completed" GridPane.columnIndex="2" GridPane.rowIndex="3" />
     </children>
     <columnConstraints>
-        <ColumnConstraints/>
-        <ColumnConstraints/>
-        <ColumnConstraints/>
-        <ColumnConstraints minWidth="112.0"/>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints minWidth="118.0" />
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints/>
-        <RowConstraints/>
-        <RowConstraints/>
-        <RowConstraints/>
-        <RowConstraints/>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
     </rowConstraints>
 </GridPane>
